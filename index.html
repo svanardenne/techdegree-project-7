@@ -6,10 +6,11 @@
     <title>Techdegree Project 7</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="main-container">
     
     <header class="main-header">
-        <h1 class="app-name">YourApp&trade;</h1>
+        
+        <h1 class="app-name">Your<span class="logo-light">App&trade;</span></h1>
 
         <div class="notification">
             <svg class="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -25,22 +26,72 @@ c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s
                 </g>
             </svg>
             <div class="notifications">
-
+                
             </div>
         </div>
 
-        <img class="profile-img" src="images/member-1.jpg">
-
-        <h3 class="profile-name">Mary Watson</h3>
+        <div class="profile">
+            <img class="profile-img" src="images/member-1.jpg">
+            <h4 class="profile-name">Mary Watson</h3>
+        </div>
 
 
     </header>
 
     <nav class="main-nav">
-
+        <ul class="nav-list">
+            <li>
+                <a>
+                    <img class="nav-icon" src="icons/icon-dashboard.svg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img class="nav-icon" src="icons/icon-members.svg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img class="nav-icon" src="icons/icon-visits.svg">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img class="nav-icon" src="icons/icon-settings.svg">
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <main class=container>
+        <div class="dashboard">
+            <h2 class="headline">Dashboard</h2>
+            <div class="dashboard-search">
+                <input type="search" placeholder="Search..." />
+            </div>
+        </div>
+
+        <div class="alert" id="alert">
+
+        </div>
+
+        <!-- line graph charts -->
+        <section class="traffic">
+            <div class="traffic-header">
+                <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container-full">
+            <!-- element line graph will attach to -->
+            <canvas id="traffic-chart"></canvas>
+            </div>
+            </section>
+
 
     </main>
 

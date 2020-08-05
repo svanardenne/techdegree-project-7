@@ -1,3 +1,6 @@
+/* ============================================= */
+/*              Variables                        */
+/* ============================================= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -335,6 +338,111 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+.main-header {
+  color: #fff;
+}
+
+.logo-light {
+  font-weight: 100;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "main-header" "main-nav" "main-content";
+}
+
+.main-header {
+  grid-area: main-header;
+}
+
+.main-nav {
+  grid-area: main-nav;
+}
+
+.container {
+  grid-area: main-content;
+}
+
+/* ============================================= */
+/*              Header                           */
+/* ============================================= */
+.main-header {
+  height: 80px;
+}
+
+.main-header,
+.profile {
+  background-color: #5E7EFA;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: center;
+}
+
+.bell {
+  height: 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #616161;
+  padding-left: 10px;
+  height: 50px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.profile-name {
+  padding: 0 10px;
+}
+
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+.main-nav {
+  background-color: #5bf14b;
+  padding: 13px;
+}
+
+.nav-list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-icon {
+  height: 50px;
+}
+
+/* ============================================= */
+/*              Searchbar                        */
+/* ============================================= */
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e8e7e3;
+  border: 2px solid #616161;
 }
 
 /*# sourceMappingURL=styles.css.map */

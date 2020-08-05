@@ -1,0 +1,22 @@
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+.main-nav {
+    background-color: #5bf14b;
+    padding: 13px;
+}
+
+.nav-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.nav-icon {
+    height: 50px;
+}

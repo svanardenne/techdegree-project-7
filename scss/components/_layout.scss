@@ -1,0 +1,21 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main-header"
+    "main-nav"
+    "main-content";
+}
+
+.main-header {
+    grid-area: main-header;
+}
+
+.main-nav {
+    grid-area: main-nav;
+}
+
+.container {
+    grid-area: main-content;
+}
