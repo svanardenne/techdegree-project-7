@@ -1,4 +1,8 @@
-.main-container {
+/* ============================================= */
+/*              Layout                           */
+/* ============================================= */
+
+.grid-container {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -16,6 +20,7 @@
     grid-area: main-nav;
 }
 
-.container {
+.main-container {
+    display: grid;
     grid-area: main-content;
 }
