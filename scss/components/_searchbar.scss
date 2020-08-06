@@ -3,9 +3,25 @@
 /* ============================================= */
 
 .dashboard {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+
+
+.headline {
+    grid-column: 1;
+}
+
+.dashboard-search {
+    grid-column: 2 / span 2;
     background-color: #e8e7e3;
     border: 2px solid rgb(97, 97, 97);
+}
+
+.alert {
+    grid-column: 1 / span 3;
+    grid-row: 2;
 }

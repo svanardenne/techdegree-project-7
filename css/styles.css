@@ -340,6 +340,10 @@ template {
   display: none;
 }
 
+.placeholder-img {
+  width: 100%;
+}
+
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
@@ -372,6 +376,11 @@ template {
 .main-container {
   display: grid;
   grid-area: main-content;
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
 }
 
 /* ============================================= */
@@ -431,6 +440,7 @@ template {
   list-style: none;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -442,11 +452,24 @@ template {
 /*              Searchbar                        */
 /* ============================================= */
 .dashboard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.headline {
+  grid-column: 1;
+}
+
+.dashboard-search {
+  grid-column: 2/span 2;
   background-color: #e8e7e3;
   border: 2px solid #616161;
+}
+
+.alert {
+  grid-column: 1/span 3;
+  grid-row: 2;
 }
 
 /* ============================================= */
@@ -454,7 +477,7 @@ template {
 /* ============================================= */
 @media (min-width: 768px) {
   .grid-container {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 80px 1fr;
     grid-template-areas: "main-header main-header" "main-nav main-content";
   }
 
@@ -471,21 +494,30 @@ template {
     grid-template-columns: 50%;
   }
 
-  .traffic,
+  .dashboard,
+.traffic,
 .social {
     grid-column: 1/span 2;
   }
 
   .daily,
-.users,
 .message {
     grid-column: 1/span 1;
   }
 
-  .mobile,
+  .users,
+.mobile,
 .activity,
 .settings {
     grid-column: 2/span 1;
+  }
+
+  .widget-container-full {
+    width: 90vw;
+  }
+
+  .widget-container-half {
+    width: 40vw;
   }
 }
 

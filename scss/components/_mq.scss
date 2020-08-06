@@ -4,7 +4,7 @@
 
 @media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 55px 1fr;
+        grid-template-columns: 80px 1fr;
         grid-template-areas: 
         "main-header main-header"
         "main-nav main-content";
@@ -19,18 +19,28 @@
     .main-container {
         grid-template-columns: 50%;
     }
+
+    .dashboard,
     .traffic,
     .social {
         grid-column: 1 / span 2;
     }
     .daily,
-    .users,
+    
     .message {
         grid-column: 1 / span 1;
     }
+
+    .users,
     .mobile,
     .activity,
     .settings {
         grid-column: 2 / span 1;
+    }
+    .widget-container-full {
+        width: 90vw;
+    }
+    .widget-container-half {
+        width: 40vw;
     }
 }
