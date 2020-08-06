@@ -1,0 +1,19 @@
+/* ============================================= */
+/*              Social Media                     */
+/* ============================================= */
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .social-container {
+        display: flex;
+        flex-direction: row;
+        .social-img {
+            width: 100px;
+        }
+    }
+}
+
+
+

@@ -3,7 +3,7 @@
 /* ============================================= */
 
 .main-nav {
-    background-color: #104e93;
+    background-color: $secondary-color;
     padding: 13px;
 }
 
@@ -15,7 +15,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
 }
 
 .nav-icon {

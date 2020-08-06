@@ -4,24 +4,32 @@
 
 .dashboard {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 130px 1fr;
     grid-template-rows: 1fr 1fr;
-    
+    .headline {
+        grid-column: 1;
+    }
+    .dashboard-search {
+        grid-column: 2 / span 2;
+        background-color: $tertiary-color;
+        border: 2px solid rgb(97, 97, 97);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        input {
+            padding: 5px 0;
+            margin-right: 15px;
+        }
+    }
+    .alert {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+    }
 }
 
 
 
-.headline {
-    grid-column: 1;
-}
 
-.dashboard-search {
-    grid-column: 2 / span 2;
-    background-color: #e8e7e3;
-    border: 2px solid rgb(97, 97, 97);
-}
 
-.alert {
-    grid-column: 1 / span 3;
-    grid-row: 2;
-}
+
+

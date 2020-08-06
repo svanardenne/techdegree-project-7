@@ -376,11 +376,12 @@ template {
 .main-container {
   display: grid;
   grid-area: main-content;
+  margin-left: 15px;
 }
 
 .widget-container-full,
 .widget-container-half {
-  width: 95vw;
+  width: 90vw;
 }
 
 /* ============================================= */
@@ -388,41 +389,32 @@ template {
 /* ============================================= */
 .main-header {
   height: 80px;
-}
-
-.main-header,
-.profile {
   background-color: #5E7EFA;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 180px;
   align-items: center;
 }
-
-.bell {
-  height: 30px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  border-left: 2px solid #616161;
-  padding-left: 10px;
-  height: 50px;
-}
-
-.notification {
+.main-header .notification {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 10px;
 }
-
-.profile-img {
+.main-header .notification .bell {
+  height: 30px;
+}
+.main-header .profile {
+  display: flex;
+  align-items: center;
+  border-left: 2px solid #616161;
+  padding-left: 15px;
+  height: 50px;
+}
+.main-header .profile-img {
   border-radius: 50%;
   height: 40px;
 }
-
-.profile-name {
+.main-header .profile-name {
   padding: 0 10px;
 }
 
@@ -453,23 +445,59 @@ template {
 /* ============================================= */
 .dashboard {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 130px 1fr;
   grid-template-rows: 1fr 1fr;
 }
-
-.headline {
+.dashboard .headline {
   grid-column: 1;
 }
-
-.dashboard-search {
+.dashboard .dashboard-search {
   grid-column: 2/span 2;
   background-color: #e8e7e3;
   border: 2px solid #616161;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-
-.alert {
+.dashboard .dashboard-search input {
+  padding: 5px 0;
+  margin-right: 15px;
+}
+.dashboard .alert {
   grid-column: 1/span 3;
   grid-row: 2;
+}
+
+/* ============================================= */
+/*              Traffic                          */
+/* ============================================= */
+.traffic-header {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+
+.traffic-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+/* ============================================= */
+/*              Social Media                     */
+/* ============================================= */
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.social .social-container {
+  display: flex;
+  flex-direction: row;
+}
+.social .social-container .social-img {
+  width: 100px;
 }
 
 /* ============================================= */
@@ -513,7 +541,7 @@ template {
   }
 
   .widget-container-full {
-    width: 90vw;
+    width: 85vw;
   }
 
   .widget-container-half {

@@ -4,40 +4,40 @@
 
 .main-header {
    height: 80px;
-}
-
-.main-header,
-.profile {
    background-color: $main-color;
    display: grid;
-   grid-template-columns: 3fr 1fr 1fr;
+   grid-template-columns: 3fr 1fr 180px;
    align-items: center;
+   .notification {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 10px;
+      .bell {
+         height: 30px;
+      }
+   }
+   .profile {
+      display: flex;
+      align-items: center;
+      border-left: 2px solid rgb(97, 97, 97);
+      padding-left: 15px;
+      height: 50px;
+      &-img {
+         border-radius: 50%;
+         height: 40px;
+      }
+      &-name {
+         padding: 0 10px;
+      }
+   }
 }
 
-.bell {
-   height: 30px;
-}
 
-.profile {
-   display: flex;
-   align-items: center;
-   border-left: 2px solid rgb(97, 97, 97);
-   padding-left: 10px;
-   height: 50px;
-}
 
-.notification {
-   display: flex;
-   align-items: center;
-   justify-content: flex-end;
-   padding: 0 10px;
-}
 
-.profile-img {
-   border-radius: 50%;
-   height: 40px;
-}
 
-.profile-name {
-   padding: 0 10px;
-}
+
+
+
+

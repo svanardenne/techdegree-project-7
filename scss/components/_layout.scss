@@ -23,9 +23,10 @@
 .main-container {
     display: grid;
     grid-area: main-content;
+    margin-left: 15px;
 }
 
 .widget-container-full,
 .widget-container-half {
-    width: 95vw;
+    width: 90vw;
 }
