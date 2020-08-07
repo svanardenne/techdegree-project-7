@@ -12,7 +12,8 @@
     .dashboard-search {
         grid-column: 2 / span 2;
         background-color: $tertiary-color;
-        border: 2px solid rgb(97, 97, 97);
+        border-bottom: 2px solid rgb(97, 97, 97);
+        border-left: 2px solid rgb(97, 97, 97);
         display: flex;
         align-items: center;
         justify-content: flex-end;

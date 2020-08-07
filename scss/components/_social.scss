@@ -6,11 +6,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
     .social-container {
         display: flex;
         flex-direction: row;
+        border: 2px solid rgb(97, 97, 97);
+        border-radius: 5px;
+        padding: 20px;
         .social-img {
             width: 100px;
+        }
+        .social-text {
+            padding-left: 20px;
+            p:first-child {
+                font-size: 1.5em;
+                margin-bottom: 0;
+            }
+            p:nth-child(2) {
+                font-size: 30px;
+                margin-top: 0;
+            }
         }
     }
 }

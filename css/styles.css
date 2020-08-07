@@ -376,7 +376,6 @@ template {
 .main-container {
   display: grid;
   grid-area: main-content;
-  margin-left: 15px;
 }
 
 .widget-container-full,
@@ -384,12 +383,18 @@ template {
   width: 90vw;
 }
 
+.daily,
+.users {
+  border: 2px solid #616161;
+  padding: 15px;
+}
+
 /* ============================================= */
 /*              Header                           */
 /* ============================================= */
 .main-header {
   height: 80px;
-  background-color: #5E7EFA;
+  background-color: #1867bf;
   display: grid;
   grid-template-columns: 3fr 1fr 180px;
   align-items: center;
@@ -454,7 +459,8 @@ template {
 .dashboard .dashboard-search {
   grid-column: 2/span 2;
   background-color: #e8e7e3;
-  border: 2px solid #616161;
+  border-bottom: 2px solid #616161;
+  border-left: 2px solid #616161;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -468,20 +474,58 @@ template {
   grid-row: 2;
 }
 
+.alert {
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.alert-banner {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: #1867bf;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.alert-banner p:first-child {
+  margin-left: 15px;
+}
+.alert-banner-close {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
 /* ============================================= */
 /*              Traffic                          */
 /* ============================================= */
+.traffic {
+  margin-left: 15px;
+}
+
 .traffic-header {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 300px;
 }
-
-.traffic-nav {
+.traffic-header .traffic-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   list-style: none;
+}
+
+.traffic,
+.daily,
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-container-full,
+.widget-container-half {
+  align-self: center;
 }
 
 /* ============================================= */
@@ -491,13 +535,29 @@ template {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .social .social-container {
   display: flex;
   flex-direction: row;
+  border: 2px solid #616161;
+  border-radius: 5px;
+  padding: 20px;
 }
 .social .social-container .social-img {
   width: 100px;
+}
+.social .social-container .social-text {
+  padding-left: 20px;
+}
+.social .social-container .social-text p:first-child {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+.social .social-container .social-text p:nth-child(2) {
+  font-size: 30px;
+  margin-top: 0;
 }
 
 /* ============================================= */

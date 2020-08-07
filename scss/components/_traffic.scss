@@ -2,15 +2,30 @@
 /*              Traffic                          */
 /* ============================================= */
 
+.traffic {
+    margin-left: 15px;
+}
+
 .traffic-header {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 300px;
+    .traffic-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+    }
 }
 
-.traffic-nav {
+.traffic,
+.daily,
+.users {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
+    flex-direction: column;
+}
+
+.widget-container-full,
+.widget-container-half {
+    align-self: center;
 }
