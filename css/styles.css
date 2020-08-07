@@ -340,8 +340,8 @@ template {
   display: none;
 }
 
-.placeholder-img {
-  width: 100%;
+a:link {
+  text-decoration: none;
 }
 
 /* ============================================= */
@@ -387,6 +387,32 @@ template {
 .users {
   border: 2px solid #616161;
   padding: 15px;
+}
+
+.members-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #616161;
+  width: 90%;
+  height: 100px;
+  margin: 0 auto;
+}
+.members-container .profile-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.members-container .members-text {
+  text-align: left;
+  width: 300px;
+}
+
+.members,
+.activity {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #616161;
 }
 
 /* ============================================= */

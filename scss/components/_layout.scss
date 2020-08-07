@@ -32,7 +32,33 @@
 
 .daily,
 .users {
-    border: 2px solid rgb(97, 97, 97);
+    border: 2px solid $border-color;
     padding: 15px;
 }
 
+.members-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid $border-color;
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    .profile-image {
+        border-radius: 50%;
+        width :50px;
+        height: 50px;
+    }
+    .members-text {
+        text-align: left;
+        width: 300px;
+    }
+}
+
+.members,
+.activity {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(97, 97, 97);
+}
