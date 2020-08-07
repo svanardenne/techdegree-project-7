@@ -25,6 +25,21 @@
     flex-direction: column;
 }
 
+.daily,
+.users {
+    border: 2px solid $border-color;
+    padding: 15px;
+}
+
+.daily {
+    border-right: none;
+    border-left: none;
+}
+
+.users {
+    border-right: none;
+}
+
 .widget-container-full,
 .widget-container-half {
     align-self: center;

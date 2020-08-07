@@ -1,0 +1,32 @@
+/* ============================================= */
+/*              Message                          */
+/* ============================================= */
+
+.message {
+    h3 {
+        margin-left: 15px;
+    }
+    &-container {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: repeat(5, 1fr);
+        row-gap: 15px;
+        padding: 15px;
+    }
+    .form-field,
+    .form-area {
+        background-color: $text-area-color;
+        padding: 15px;
+    }
+    .form-field {
+        grid-row: 1 / span 1;
+    }
+    .form-area {
+        min-height:150px;
+        grid-row: 2 / span 3;
+    }
+    #send {
+        grid-row: 5 / span 1;
+    }
+}
+

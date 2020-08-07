@@ -1,4 +1,46 @@
+/* ============================================= */
+/*              Base                             */
+/* ============================================= */
+
+input {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+}
 
 a:link {
     text-decoration: none;
+}
+
+.button-primary {
+    color: #fff;
+    background: $primary-color;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    transition: background .5s ease-out;
+}
+
+.button-primary:hover {
+    background: lighten($primary-color, 10%);
+}
+
+.button-primary:active {
+    background: $secondary-color;
+}
+
+.button-disabled {
+    color: #fff;
+    background: lighten($border-color, 10%);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    transition: background .5s ease-out;
+}
+
+.button-disabled:hover {
+    background: lighten($border-color, 20%);
+}
+
+.button-disabled:active {
+    background: darken($border-color, 10%);
 }

@@ -31,9 +31,13 @@
         grid-column: 1 / span 1;
     }
 
+    .members,
+    .activity {
+        grid-column: 1 / span 2;
+    }
+
     .users,
     .mobile,
-    .activity,
     .settings {
         grid-column: 2 / span 1;
     }
@@ -42,5 +46,17 @@
     }
     .widget-container-half {
         width: 40vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .members {
+        grid-column: 1 / span 1;
+    }
+    .activity {
+        grid-column: 2 / span 1;
+    }
+    .social {
+        flex-direction: row;
     }
 }

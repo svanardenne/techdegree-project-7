@@ -4,28 +4,33 @@
 
 .social {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 50px;
     margin-bottom: 50px;
     .social-container {
         display: flex;
+        flex-grow: 1;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $text-area-color;
         border: 2px solid $border-color;
         border-radius: 5px;
         padding: 20px;
+        margin: 15px;
         .social-img {
             width: 100px;
         }
         .social-text {
             padding-left: 20px;
             p:first-child {
-                font-size: 1.5em;
+                font-size: 2em;
                 margin-bottom: 0;
             }
             p:nth-child(2) {
-                font-size: 30px;
+                font-size: 3em;
                 margin-top: 0;
             }
         }
