@@ -453,6 +453,7 @@ a:link {
 .main-header .notification .bell {
   height: 30px;
   transition: 0.8s ease-out;
+  margin-right: 10px;
 }
 .main-header .notification .bell:hover {
   animation: bell 1s ease-out forwards;
@@ -484,7 +485,7 @@ a:link {
   display: inline-block;
   position: absolute;
   top: -5px;
-  right: 4px;
+  right: 15px;
 }
 
 @keyframes bell {

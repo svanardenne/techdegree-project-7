@@ -17,6 +17,7 @@
       .bell {
          height: 30px;
          transition: .8s ease-out;
+         margin-right: 10px;
       }
       .bell:hover {
          animation: bell 1s ease-out forwards;
@@ -50,7 +51,7 @@
    display: inline-block;
    position: absolute;
    top: -5px;
-   right: 4px;
+   right: 15px;
 }
 
 
