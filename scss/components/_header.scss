@@ -13,8 +13,13 @@
       align-items: center;
       justify-content: flex-end;
       padding: 0 10px;
+      position: relative;
       .bell {
          height: 30px;
+         transition: .8s ease-out;
+      }
+      .bell:hover {
+         animation: bell 1s ease-out forwards;
       }
    }
    .profile {
@@ -33,9 +38,20 @@
    }
 }
 
+.app-name {
+   margin-left: 15px;
+}
 
-
-
+.new-notifications {
+   background: $tertiary-color;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   display: inline-block;
+   position: absolute;
+   top: -5px;
+   right: 4px;
+}
 
 
 

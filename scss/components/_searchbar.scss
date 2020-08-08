@@ -4,14 +4,15 @@
 
 .dashboard {
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 150px 1fr;
     grid-template-rows: 1fr 1fr;
     .headline {
         grid-column: 1;
+        text-align: center;
     }
     .dashboard-search {
         grid-column: 2 / span 2;
-        background-color: $text-area-color;
+        background-color: $off-white;
         border-bottom: 2px solid rgb(97, 97, 97);
         border-left: 2px solid rgb(97, 97, 97);
         display: flex;

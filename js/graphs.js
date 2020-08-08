@@ -75,8 +75,8 @@ const mobileData = {
         borderWidth: 0,
         backgroundColor: [
             '#1867bf',
-            '#78CF82',
-            '#51B6C8'
+            '#bf183f',
+            '#bfac18'
         ]
     }]
 };

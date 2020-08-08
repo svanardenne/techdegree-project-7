@@ -389,12 +389,20 @@ a:link {
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
+* {
+  font-family: "Varela Round", sans-serif;
+}
+
 .main-header {
   color: #fff;
 }
 
 .logo-light {
   font-weight: 100;
+}
+
+.social-text p {
+  font-family: "Roboto", sans-serif;
 }
 
 /* ============================================= */
@@ -440,9 +448,14 @@ a:link {
   align-items: center;
   justify-content: flex-end;
   padding: 0 10px;
+  position: relative;
 }
 .main-header .notification .bell {
   height: 30px;
+  transition: 0.8s ease-out;
+}
+.main-header .notification .bell:hover {
+  animation: bell 1s ease-out forwards;
 }
 .main-header .profile {
   display: flex;
@@ -459,6 +472,41 @@ a:link {
   padding: 0 10px;
 }
 
+.app-name {
+  margin-left: 15px;
+}
+
+.new-notifications {
+  background: #bfac18;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  right: 4px;
+}
+
+@keyframes bell {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: rotate(30deg) scale(1.5);
+  }
+  40% {
+    transform: rotate(-30deg) scale(1.5);
+  }
+  60% {
+    transform: rotate(30deg) scale(1.5);
+  }
+  80% {
+    transform: rotate(-30deg) scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
@@ -486,15 +534,16 @@ a:link {
 /* ============================================= */
 .dashboard {
   display: grid;
-  grid-template-columns: 130px 1fr;
+  grid-template-columns: 150px 1fr;
   grid-template-rows: 1fr 1fr;
 }
 .dashboard .headline {
   grid-column: 1;
+  text-align: center;
 }
 .dashboard .dashboard-search {
   grid-column: 2/span 2;
-  background-color: #f3f3f3;
+  background-color: #f8f8ff;
   border-bottom: 2px solid #616161;
   border-left: 2px solid #616161;
   display: flex;
@@ -596,7 +645,7 @@ a:link {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #f3f3f3;
+  background-color: #f8f8ff;
   border: 2px solid #616161;
   border-radius: 5px;
   padding: 20px;

@@ -1,0 +1,20 @@
+@keyframes bell {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: rotate(30deg) scale(1.5);
+    }
+    40% {
+        transform: rotate(-30deg)scale(1.5);
+    }
+    60% {
+        transform: rotate(30deg)scale(1.5);
+    }
+    80% {
+        transform: rotate(-30deg)scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
