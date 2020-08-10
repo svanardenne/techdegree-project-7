@@ -438,9 +438,12 @@ a:link {
 .main-header {
   height: 80px;
   background-color: #1867bf;
-  display: grid;
-  grid-template-columns: 3fr 1fr 180px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.main-header .notification-wrapper {
+  display: flex;
 }
 .main-header .notification {
   display: flex;
@@ -483,8 +486,36 @@ a:link {
   border-radius: 50%;
   display: inline-block;
   position: absolute;
-  top: -5px;
+  top: 5px;
   right: 15px;
+}
+
+.notifications {
+  display: none;
+  background-color: #fff;
+  color: black;
+  opacity: 0.9;
+  border: 2px solid #616161;
+  border-radius: 5px;
+  width: 300px;
+  position: absolute;
+  top: 50px;
+  left: -125px;
+}
+.notifications ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.notifications ul li {
+  border-bottom: 2px solid #616161;
+  padding: 10px 5px;
+}
+.notifications ul li:last-child {
+  border-bottom: none;
 }
 
 @keyframes bell {
