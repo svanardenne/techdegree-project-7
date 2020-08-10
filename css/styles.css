@@ -348,6 +348,10 @@ input {
   border-radius: 5px;
 }
 
+a {
+  color: #bf183f;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -697,6 +701,22 @@ a:link {
   margin-top: 0;
 }
 
+.svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1867bf;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.twitter,
+.facebook,
+.google-plus {
+  width: 50px;
+}
+
 /* ============================================= */
 /*              Members                          */
 /* ============================================= */
@@ -745,6 +765,11 @@ a:link {
 
 .activity {
   border-left: 2px solid #616161;
+}
+
+.arrow {
+  color: #bf183f;
+  font-size: 30px;
 }
 
 /* ============================================= */

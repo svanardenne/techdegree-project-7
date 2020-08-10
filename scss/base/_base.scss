@@ -7,6 +7,10 @@ input {
     border-radius: 5px;
 }
 
+a {
+    color: $accent-color;
+}
+
 a:link {
     text-decoration: none;
 }
