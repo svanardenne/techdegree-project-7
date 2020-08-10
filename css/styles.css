@@ -410,7 +410,6 @@ a:link {
 /* ============================================= */
 .grid-container {
   display: grid;
-  grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "main-header" "main-nav" "main-content";
 }
@@ -430,7 +429,7 @@ a:link {
 
 .widget-container-full,
 .widget-container-half {
-  width: 90vw;
+  width: 100vw;
 }
 
 /* ============================================= */
@@ -696,6 +695,9 @@ a:link {
 .members-container .profile-combined .members-text {
   text-align: left;
   width: 75%;
+}
+.members-container .profile-combined .new-members {
+  max-width: 200px;
 }
 
 .members,
