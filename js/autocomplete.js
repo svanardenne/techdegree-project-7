@@ -35,10 +35,8 @@ searchbar.addEventListener('keyup', () => {
 userList.addEventListener('click', (e) => {
     let click = e.target.textContent;
     for (let i = 0; i < users.length; i++) {
-        if (searchbar.value !== users[i]) {
             searchbar.value = click;
             let listItem = userList.children[i];
             listItem.className = "hidden"
-        }
     }
 });
