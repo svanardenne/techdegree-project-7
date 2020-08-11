@@ -3,9 +3,9 @@ const bell = document.querySelector('.bell');
 const notifications = document.querySelector('.notifications');
 
 bell.addEventListener('click', (e) => {
-    if (notifications.style.display = "none") {
-        notifications.style.display = "inline-block";
-    } else {
+    if (notifications.style.display === "inline-block") {
         notifications.style.display = "none";
+    } else {
+        notifications.style.display = "inline-block"
     }
 });
