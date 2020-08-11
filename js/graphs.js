@@ -28,6 +28,51 @@ let trafficOptions = {
     }
 };
 
+const dailyTrafficData = {
+    labels: ["S", "M", "T", "W", "T", "F", "S"],
+    datasets: [{
+        label: '# of Hits',
+        data: [75, 115, 175, 125, 225, 200, 100],
+        backgroundColor: 'rgba(24, 103, 191, .3)',
+        borderWidth: 1
+    }]
+};
+
+const hourlyTrafficData = {
+    labels: [
+        '24:00',
+        '1:00',
+        '2:00',
+        '3:00',
+        '4:00',
+        '5:00',
+        '6:00',
+        '7:00',
+        '8:00',
+        '9:00',
+        '10:00',
+        '11:00',
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+        '18:00',
+        '19:00',
+        '20:00',
+        '21:00',
+        '22:00',
+        '23:00'
+    ],
+    datasets: [{
+        label: '# of hits',
+        data: [2, 1, 2, 3, 2, 5, 5, 4, 6, 10, 2, 3, 4, 1, 2, 4, 4, 4, 4, 1, 2, 3, 1, 1],
+        backgroundColor: 'rgba(24, 103, 191, .3)',
+        borderWidth: 1
+    }]
+};
+
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData,
