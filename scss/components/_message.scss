@@ -41,6 +41,9 @@
     background-color: white;
     width: 190px;
     top: 34px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .hidden {

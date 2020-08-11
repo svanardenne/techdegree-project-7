@@ -460,6 +460,7 @@ a:link {
   height: 30px;
   transition: 0.8s ease-out;
   margin-right: 10px;
+  cursor: pointer;
 }
 .main-header .notification .bell:hover {
   animation: bell 1s ease-out forwards;
@@ -812,6 +813,9 @@ a:link {
   background-color: white;
   width: 190px;
   top: 34px;
+}
+.user-list:hover {
+  cursor: pointer;
 }
 
 .hidden {
