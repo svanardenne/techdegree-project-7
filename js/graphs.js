@@ -28,6 +28,16 @@ let trafficOptions = {
     }
 };
 
+const weeklyTrafficData = {
+    labels: ['Sun, 16', 'Mon, 17', 'Tues, 18', 'Wed, 19', 'Thurs, 20', 'Fri, 21', 'Sat, 22'],
+    datasets: [{
+        label: '# of hits',
+        data: [200, 40, 55, 45, 60, 100, 250],
+        backgroundColor: 'rgba(24, 103, 191, .3)',
+        borderWidth: 1
+    }]
+}
+
 const dailyTrafficData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{
