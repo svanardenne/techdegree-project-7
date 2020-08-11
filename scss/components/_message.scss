@@ -30,3 +30,15 @@
     }
 }
 
+.autocomplete {
+    position: relative;
+}
+
+.user-list {
+    position: absolute;
+    list-style: none;
+    border: 1px solid $border-color;
+    background-color: white;
+    width: 190px;
+    top: 34px;
+}

@@ -291,7 +291,12 @@
             <h3>Message User</h3>
 
             <form class="message-container">
-                <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                <div class="autocomplete">
+                    <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                    <ul class=user-list>
+                        
+                    </ul>
+                </div>
                 <textarea placeholder="Message for user" class="form-area" id= "messageField" ></textarea>
                 <button class="button-primary" id="send" >Send</button>
             </form>
@@ -347,6 +352,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="js/alert.js"></script>
+    <script src="js/autocomplete.js"></script>
     <script src="js/messaging.js"></script>
     <script src="js/graphs.js"></script>
     <script src="js/dropdown.js"></script>
