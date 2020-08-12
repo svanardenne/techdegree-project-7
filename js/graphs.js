@@ -1,6 +1,11 @@
+/* ============================================= */
+/*              Graph.js                        */
+/* ============================================= */
+
 const trafficCanvas = document.getElementById('traffic-chart');
 
-let trafficData = {
+//Traffic Data
+let monthlyTrafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
 "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -83,12 +88,14 @@ const hourlyTrafficData = {
     }]
 };
 
+//Create Traffic Chart
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
-    data: trafficData,
+    data: weeklyTrafficData,
     options: trafficOptions
 });
 
+//Daily Data
 const dailyCanvas = document.getElementById("daily-chart");
 
 const dailyData = {
@@ -114,12 +121,15 @@ const dailyOptions = {
     }
 }
 
+//Creates Daily Chart
 let dailyChart = new Chart(dailyCanvas, {
     type: 'bar',
     data: dailyData,
     options: dailyOptions
     });
 
+
+//Mobile Data
 const mobileCanvas = document.getElementById("mobile-users");
 
 const mobileData = {
@@ -146,8 +156,57 @@ const mobileOptions = {
     }
 }
 
+//Create Mobile Chart
 let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
     options: mobileOptions
 });
+
+//Line Graph Navigation
+const trafficNav = document.querySelector('.traffic-nav');
+const links = document.getElementsByClassName('traffic-nav-link');
+const hourly = document.getElementsByClassName('traffic-nav-link')[0];
+const daily = document.getElementsByClassName('traffic-nav-link')[1];
+const weekly = document.getElementsByClassName('traffic-nav-link')[2];
+const monthly = document.getElementsByClassName('traffic-nav-link')[3];
+
+// Create a click event that allows for the class on 
+// list items to be updated with "active" status
+
+
+
+//Switches between menu selections on  click
+trafficNav.addEventListener('click', (e) => {
+    let selection = e.target;
+    let active = document.querySelector('.active');
+    if (selection.className !== 'active' && selection.className !== 'traffic-nav') {
+        active.classList.remove('active');
+        selection.classList.add('active');
+        if (hourly.classList.contains('active')) {
+            //Changes the chart to hourly data
+            trafficChart.config.data = hourlyTrafficData;
+            trafficChart.update();
+        }
+        if (daily.classList.contains('active')) {
+            //Changes the chart to hourly data
+            trafficChart.config.data = dailyTrafficData;
+            trafficChart.update();
+        }
+        if (weekly.classList.contains('active')) {
+            //Changes the chart to hourly data
+            trafficChart.config.data = weeklyTrafficData;
+            trafficChart.update();
+        }
+        if (monthly.classList.contains('active')) {
+            //Changes the chart to hourly data
+            trafficChart.config.data = monthlyTrafficData;
+            trafficChart.update();
+        }
+    }
+});
+
+
+
+
+console.log(trafficChart);
