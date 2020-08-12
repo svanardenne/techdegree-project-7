@@ -170,12 +170,7 @@ const daily = document.getElementsByClassName('traffic-nav-link')[1];
 const weekly = document.getElementsByClassName('traffic-nav-link')[2];
 const monthly = document.getElementsByClassName('traffic-nav-link')[3];
 
-// Create a click event that allows for the class on 
-// list items to be updated with "active" status
-
-
-
-//Switches between menu selections on  click
+//Switches between menu selections on  click and changes graph data
 trafficNav.addEventListener('click', (e) => {
     let selection = e.target;
     let active = document.querySelector('.active');
@@ -220,8 +215,3 @@ trafficNav.addEventListener('click', (e) => {
         }
     }
 });
-
-
-
-
-console.log(trafficChart);

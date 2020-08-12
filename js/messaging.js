@@ -1,8 +1,13 @@
+/* ============================================= */
+/*              Messaging                        */
+/* ============================================= */
+
 const form = document.querySelector('.message-container');
 const user = document.getElementById('userField');
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
+//Creates alerts to inform the user fields need to be filled out
 form.addEventListener('submit', (e) => {
     event.preventDefault();
     if (user.value === "" && message.value === "") {

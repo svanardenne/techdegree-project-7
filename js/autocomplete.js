@@ -1,3 +1,7 @@
+/* ============================================= */
+/*              Autocomplete                        */
+/* ============================================= */
+
 const searchbar = document.getElementById('userField');
 const userList = document.querySelector('.user-list');
 const listItems = userList.children;
