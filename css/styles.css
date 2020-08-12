@@ -819,6 +819,7 @@ a:link {
 }
 
 .user-list {
+  display: none;
   position: absolute;
   list-style: none;
   border: 1px solid #616161;

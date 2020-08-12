@@ -24,6 +24,7 @@ for (let i = 0; i < users.length; i++) {
 
 //compares input to array
 searchbar.addEventListener('keyup', () => {
+    userList.style.display = 'block';
     for (let i = 0; i < users.length; i++) {
         let user = users[i].toLowerCase();
         if (user.includes(searchbar.value.toLowerCase()) && searchbar.value !== "") {
@@ -40,7 +41,6 @@ userList.addEventListener('click', (e) => {
     let click = e.target.textContent;
     for (let i = 0; i < users.length; i++) {
             searchbar.value = click;
-            let listItem = userList.children[i];
-            listItem.className = "hidden"
+            userList.style.display = 'none';
     }
 });
