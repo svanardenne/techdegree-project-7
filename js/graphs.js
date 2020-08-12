@@ -16,11 +16,9 @@ let monthlyTrafficData = {
     }]
 };
 
-let trafficOptions = {
+const trafficOptions = {
     aspectRatio: 2.5,
-    animation: {
-        duration: 0
-    },
+    
     scales: {
         yAxes: [{
             ticks: {
@@ -88,12 +86,7 @@ const hourlyTrafficData = {
     }]
 };
 
-//Create Traffic Chart
-let trafficChart = new Chart(trafficCanvas, {
-    type: 'line',
-    data: weeklyTrafficData,
-    options: trafficOptions
-});
+
 
 //Daily Data
 const dailyCanvas = document.getElementById("daily-chart");
@@ -121,14 +114,6 @@ const dailyOptions = {
     }
 }
 
-//Creates Daily Chart
-let dailyChart = new Chart(dailyCanvas, {
-    type: 'bar',
-    data: dailyData,
-    options: dailyOptions
-    });
-
-
 //Mobile Data
 const mobileCanvas = document.getElementById("mobile-users");
 
@@ -155,6 +140,20 @@ const mobileOptions = {
         }
     }
 }
+
+//Create Traffic Chart
+let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: weeklyTrafficData,
+    options: trafficOptions
+});
+
+//Creates Daily Chart
+let dailyChart = new Chart(dailyCanvas, {
+    type: 'bar',
+    data: dailyData,
+    options: dailyOptions
+    });
 
 //Create Mobile Chart
 let mobileChart = new Chart(mobileCanvas, {
@@ -185,23 +184,39 @@ trafficNav.addEventListener('click', (e) => {
         selection.classList.add('active');
         if (hourly.classList.contains('active')) {
             //Changes the chart to hourly data
-            trafficChart.config.data = hourlyTrafficData;
-            trafficChart.update();
+            trafficChart.destroy();
+            trafficChart = new Chart(trafficCanvas, {
+                type: 'line',
+                data: hourlyTrafficData,
+                options: trafficOptions
+            });
         }
         if (daily.classList.contains('active')) {
             //Changes the chart to hourly data
-            trafficChart.config.data = dailyTrafficData;
-            trafficChart.update();
+            trafficChart.destroy();
+            trafficChart = new Chart(trafficCanvas, {
+                type: 'line',
+                data: dailyTrafficData,
+                options: trafficOptions
+            });
         }
         if (weekly.classList.contains('active')) {
             //Changes the chart to hourly data
-            trafficChart.config.data = weeklyTrafficData;
-            trafficChart.update();
+            trafficChart.destroy();
+            trafficChart = new Chart(trafficCanvas, {
+                type: 'line',
+                data: weeklyTrafficData,
+                options: trafficOptions
+            });
         }
         if (monthly.classList.contains('active')) {
             //Changes the chart to hourly data
-            trafficChart.config.data = monthlyTrafficData;
-            trafficChart.update();
+            trafficChart.destroy();
+            trafficChart = new Chart(trafficCanvas, {
+                type: 'line',
+                data: monthlyTrafficData,
+                options: trafficOptions
+            });
         }
     }
 });
