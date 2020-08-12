@@ -2,7 +2,7 @@
 /*              Media Queries                    */
 /* ============================================= */
 
-@media (min-width: 768px) {
+@media (min-width: $br-small) {
     .grid-container {
         grid-template-columns: 80px 1fr;
         grid-template-areas: 
@@ -49,7 +49,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $br-large) {
     .members {
         grid-column: 1 / span 1;
     }
